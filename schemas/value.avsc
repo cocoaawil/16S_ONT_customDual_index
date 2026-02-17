@@ -1,0 +1,374 @@
+{
+  "namespace": "nstda.nbt.amr.value",
+  "name": "value",
+  "type": "record",
+  "__WORKFLOW_HOME_PATH_BY_ENVIRONMENT": {
+    "standard": "/tarafs/biobank/data/share/pachyderm",
+    "tara": "/tarafs/biobank/data/share/pachyderm",
+    "colossus": "/colossus/home/krittin/share/pachyderm",
+    "nbt": "/nbt_data/share/pachyderm",
+    "gb": "/nbt_main/share/pachyderm",
+    "jupyter": "/cu-share/sw"
+  },
+  "fields": [
+    {
+      "name": "krakenDB",
+      "type": "string",
+      "doc": "Path of kraken database",
+      "default": "env://amr/db/kraken_db/k2_standard_16gb_20240605",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "short_fastqs",
+      "type": "string",
+      "doc": "Path to paired short read fastq",
+      "default": "env://amr/data/illumina",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "long_fastqs",
+      "type": "string",
+      "doc": "Path to long read fastq",
+      "default": "env://amr/data/nanopore",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "ontKit",
+      "doc": "Nanopore kit id",
+      "type": "string",
+      "default": "SQK-LSK109",
+      "__type": "dir",
+      "__required": false
+    },
+    {
+      "name": "flowcellID",
+      "doc": "Nanopore flowcell id",
+      "type": "string",
+      "default": "FLO-MIN111",
+      "__type": "dir",
+      "__required": false
+    },
+    {
+      "name": "guppyNumCaller",
+      "type": "int",
+      "doc": "Number of guppy caller",
+      "default": 4,
+      "__required": false,
+      "__private": false
+    },
+    {
+      "name": "checkMDB",
+      "type": "string",
+      "doc": "Path of checkM database",
+      "default": "env://amr/db/checkMDB",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "mode",
+      "doc": "Analysis mode : shortRead|longRead|hybrid|hybrid_long|phylo|taxo|custom_phylo|custom_phyloNextstrain|pod5|pod5_assembly",
+      "type": "string",
+      "default": "shortRead",
+      "__type": "dir",
+      "__required": false
+    },
+    {
+      "name": "taxonID",
+      "doc": "Taxon ID that you want to get. Default is 1 mean root",
+      "type": "string",
+      "default": "1",
+      "__type": "dir",
+      "__required": false
+    },
+    {
+      "name": "prokka_kingdom",
+      "doc": "Annotation mode: Archaea|Bacteria|Mitochondria|Viruses",
+      "type": "string",
+      "default": "Bacteria",
+      "__type": "dir",
+      "__required": false
+
+    },
+    {
+      "name": "selectedSampleIds",
+      "type": ["null", "string"],
+      "doc": "Specify file contain selected sample ID write in file line by line. Program will run only sample that present in this file.",
+      "default": null,
+      "__type": "path",
+      "__required": false,
+      "__private": false
+    },
+    {
+      "name": "spatypeDB",
+      "type": "string",
+      "doc": "Path of spatype database",
+      "default": "env://amr/db/spatype_db",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "enableRoary",
+      "type": "boolean",
+      "doc": "Enable roary module",
+      "default": false,
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "enableRAXML",
+      "type": "boolean",
+      "doc": "Enable RAXML module",
+      "default": false,
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "sequence_fasta",
+      "type": "string",
+      "doc": "Path to sequence alignment file in fasta format [.fasta|.fa|.aln]",
+      "default": "env://amr/data/nanopore",
+      "__type": "dir",
+      "__required": false,
+      "__private": false
+    },
+    {
+      "name": "busco_datasets",
+      "type": "string",
+      "doc": "Path of spatype database",
+      "default": "env://amr/db/busco_prokaryota_25072024",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "amrfinderDB",
+      "type": "string",
+      "doc": "Path of spatype database",
+      "default": "env://amr/db/amr_finder_db/2024-05-02.2",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "cgviewBuilder",
+      "type": "string",
+      "doc": "Path of cgviewbuilder",
+      "default": "env://amr/cgview-builder/cgview_builder_cli.rb",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "inputCSV",
+      "type": "string",
+      "doc": "Path direct to input CSV file wich has format SampleID,READ1,READ2,Longread",
+      "default": "env://amr/data/",
+      "__type": "path",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "doradoModelPath",
+      "type": "string",
+      "doc": "Path of dorado model",
+      "default": "env://dorado/dorado_model/",
+      "__type": "dir",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "pod5folderlist",
+      "type": ["null", "string"],
+      "doc": "pod5 folder list file (txt format one folder per sample)",
+      "default": null,
+      "__type": "path",
+      "__required": false,
+      "__private": false
+    },
+    {
+      "name": "model",
+      "type": "string",
+      "doc": "specify path of model or automatic model selection |hac|sup",
+      "default": "sup",
+      "__type": "path",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "nextstrain_method",
+      "type": "string",
+      "doc": "Nextstrain tree builder to use [fasttree,raxml,iqtree]",
+      "default": "iqtree",
+      "__required": false,
+      "__private": true
+    },
+    {
+      "name": "nextstrain_metadata",
+      "type": "string",
+      "doc": "sequence metadata, as CSV or TSV for nextstrain (Must contain strain,country,location,Lineage and date eg. strain|location|date|Lineage|DST)",
+      "default": "env://tb/db/meta.csv",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "nextstrain_root",
+      "type": "string",
+      "doc": "rooting mechanism ('best', least-squares', 'min_dev','oldest') OR node to root by OR two nodes indicating amonophyletic group to root by. Check augar refine --help for more info",
+      "default": "best",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "nextstrain_coalescent",
+      "type": "string",
+      "doc": "coalescent time scale in units of inverse clock rate (float), optimize as scalar ('opt'), or skyline ('skyline')",
+      "default": "opt",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "nextstrain_inference",
+      "type": "string",
+      "doc": "calculate joint or marginal maximum likelihood ancestral sequence states",
+      "default": "joint",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "nextstrain_columns",
+      "type": "string",
+      "doc": "metadata fields to perform discrete reconstruction on. Must be relate with column in meta data.",
+      "default": "location",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "auspice_config",
+      "type": "string",
+      "doc": "Auspice configuration file.",
+      "default": "env://amr/nextstrain/auspice.json",
+      "__type": "path",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "geo_info",
+      "type": "string",
+      "doc": "Latitudes and longitudes for geography traits in TSV file format. [location|location_name|lat|long]",
+      "default": "env://tb/nextstrain/lat_long.tsv",
+      "__type": "path",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name" : "method",
+      "type" : "string",
+      "symbols": ["nano16SJunya", "null"],
+      "default" : "null",
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "indexnanofile",
+      "type": ["null", "string"],
+      "doc": "Path to metadata folder which contain text file",
+      "default": "string",
+      "__required": true,
+      "__private": true
+    },
+    {
+      "name": "qscore",
+      "type": "int",
+      "doc": "Phred assigns a Q score",
+      "default": 15,
+      "__required": true,
+      "__private": false
+    },
+    {
+      "name": "dbtaxonomy",
+      "doc": "Path to database for taxonomy classification based on kraken2",
+      "type": {
+        "name": "referenceEnumType",
+        "type": "enum",
+        "symbols": [
+          "k2_standard_16gb",
+          "16S_RDP",
+          "16S_SILVA138",
+          "16S_Greengenes2",
+          "ncbi_16S_18S"
+        ],
+        "default": "k2_standard_16gb"
+      },
+      "default": "k2_standard_16gb",
+      "__type": "path",
+      "__required": true,
+      "__private": false,
+      "__need_resolve": {
+        "dbtaxonomy": "__PATH_BY_DATABASE"
+      },
+      "__PATH_BY_DATABASE": {
+        "k2_standard_16gb": "env://kraken_db/k2_standard_16gb_20240605",
+        "16S_RDP": "env://kraken_db/16S_RDP_k2db",
+        "16S_SILVA138": "env://kraken_db/SILVA_138_2_k2db",
+        "16S_Greengenes2": "env://kraken_db/k2__gg2-entire",
+        "ncbi_16S_18S": "env://kraken_db/ncbi_16s_18s_kraken2"
+      }
+    },
+    {
+      "name": "output_assembly",
+      "type": "string",
+      "doc": "Output store Dir Path",
+      "default": "launchDir://",
+      "__type": "dir",
+      "__required": false,
+      "__private": true
+    },
+    {
+      "name": "output",
+      "type": "string",
+      "doc": "Output Dir Path",
+      "default": "launchDir://",
+      "__type": "dir",
+      "__required": false,
+      "__private": true
+    },
+    {
+      "name": "enableS3",
+      "type": "boolean",
+      "doc": "enable publish data to S3",
+      "default": false,
+      "__required": false,
+      "__private": true
+    },
+    {
+      "name": "s3input",
+      "type": ["null", 
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "doc": "Array of S3 Input path for production use only...",
+      "default": null,
+      "__required": false,
+      "__private": true
+    },
+    {
+      "name": "s3output",
+      "type": ["null", "string"],
+      "doc": "S3 Output Dir Path",
+      "default": "s3",
+      "__type": "dir",
+      "__required": false,
+      "__private": true
+    }
+  ]
+}

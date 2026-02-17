@@ -1,0 +1,56 @@
+{
+  "namespace": "nstda.nbt.amr.key",
+  "name": "key",
+  "type": "record",
+  "__PROGRESS_BY_SUBWORKFLOW_AND_PROCESS": {
+    "ExampleSubWorkflow": {
+      "Example": { "process_started": 0.0, "process_completed": 100.0 }
+    }
+  },
+  "fields": [
+    {
+      "name": "runId",
+      "type": ["null", "string"],
+      "doc": "Run Id",
+      "default": null
+    },
+    {
+      "name": "priority",
+      "type": {
+        "type": "enum",
+        "name": "priorityEnumType",
+        "symbols": ["HIGH", "LOW"],
+        "default": "LOW"
+      },
+      "doc": "which Priority Queue to run",
+      "default": "LOW"
+    },
+    {
+      "name": "projectId",
+      "type": "string",
+      "doc": "Project Id"
+    },
+    {
+      "name": "userId",
+      "type": "string",
+      "doc": "User Id"
+    },
+    {
+      "name": "datasetId",
+      "type": ["null", "string"],
+      "doc": "Dataset Id if not specified they will be $userId_$projectId",
+      "default": null
+    },
+    {
+      "name": "workflowVersion",
+      "type": ["null", "string"],
+      "doc": "Workflow Version hash value",
+      "default": null
+    },
+    {
+      "name": "sampleIds",
+      "type": { "type": "array", "items": "string" },
+      "doc": "Specifies sampleIds... for this dataset id"
+    }
+  ]
+}
