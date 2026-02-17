@@ -1,5 +1,5 @@
 ## How to run 16Snanopore based on Dr.Junya
-### Code running example :
+### Example Usage :
 ### module load Nextflow/20.10.0
 #### nextflow run -profile gb main.nf --pod5folderlist resources/listdir.txt --mode pod5 --method nano16SJunya --indexnanofile resources/minibar_index_list_16S.txt --qscore 15 --dbtaxonomy ncbi_16S_18S
 
