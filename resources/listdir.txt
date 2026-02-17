@@ -1,0 +1,4 @@
+/home/jovyan/amr-master/resources/inputsam20_7id
+/home/jovyan/amr-master/resources/inputsam21_7id
+/home/jovyan/amr-master/resources/inputsam22_7id
+/home/jovyan/amr-master/resources/inputsam27_7id

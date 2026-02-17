@@ -1,0 +1,3 @@
+/home/jovyan/amr-master/resources/inputsam20
+/home/jovyan/amr-master/resources/inputsam21
+/home/jovyan/amr-master/resources/inputsam22

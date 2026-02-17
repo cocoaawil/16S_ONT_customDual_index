@@ -1,0 +1,117 @@
+{
+      "name": "databasecase",
+      "type": {
+        "name": "databaseEnumType",
+        "type": "enum",
+        "symbols": [
+          "ckd_unimpute_build37_All",
+          "ckd_unimpute_build38_All",
+          "ckd_unimpute_build37_Female",
+          "ckd_unimpute_build38_Female",
+          "ckd_unimpute_build37_Male",
+          "ckd_unimpute_build38_Male",
+          "ckd_impute_build37_All",
+          "ckd_impute_build38_All",
+          "ckd_impute_build37_Female",
+          "ckd_impute_build38_Female",
+          "ckd_impute_build37_Male",
+          "ckd_impute_build38_Male"
+        ],
+        "default": "ckd_unimpute_build38_All"
+      },
+      "default": "ckd_unimpute_build38_All",
+      "doc": "Database to.",
+      "__type": "path",
+      "__required": true,
+      "__private": false,
+      "__need_resolve": {
+        "databasecaseBed": "__BED_PATH_BY_DATABASE",
+        "databasecaseBim": "__BIM_PATH_BY_DATABASE",
+        "databasecaseFam": "__FAM_PATH_BY_DATABASE"
+      },
+      "__BED_PATH_BY_DATABASE": {
+        "ckd_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/CKD/build38/All/hweupckdramaibd05_qc.bed",
+        "ckd_unimpute_build38_Female": "env://gwashu/refdatabase/unimputed/CKD/build38/Female/femaleCKD.bed",
+        "ckd_unimpute_build38_Male": "env://gwashu/refdatabase/unimputed/CKD/build38/Male/maleCKD.bed"
+      },
+      "__BIM_PATH_BY_DATABASE": {
+        "ckd_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/CKD/build38/All/hweupckdramaibd05_qc.bim",
+        "ckd_unimpute_build38_Female": "env://gwashu/refdatabase/unimputed/CKD/build38/Female/femaleCKD.bim",
+        "ckd_unimpute_build38_Male": "env://gwashu/refdatabase/unimputed/CKD/build38/Male/maleCKD.bim"
+      },
+      "__FAM_PATH_BY_DATABASE": {
+        "ckd_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/CKD/build38/All/hweupckdramaibd05_qc.fam",
+        "ckd_unimpute_build38_Female": "env://gwashu/refdatabase/unimputed/CKD/build38/Female/femaleCKD.fam",
+        "ckd_unimpute_build38_Male": "env://gwashu/refdatabase/unimputed/CKD/build38/Male/maleCKD.fam"
+      },
+    },
+    {
+      "name": "databasectrl",
+      "type": {
+        "name": "databaseEnumType",
+        "type": "enum",
+        "symbols": [
+          "nhes_unimpute_build37_All",
+          "nhes_unimpute_build38_All",
+          "nhes_unimpute_build37_Female",
+          "nhes_unimpute_build38_Female",
+          "nhes_unimpute_build37_Male",
+          "nhes_unimpute_build38_Male",
+          "nhes_impute_build37_All",
+          "nhes_impute_build38_All",
+          "nhes_impute_build37_Female",
+          "nhes_impute_build38_Female",
+          "nhes_impute_build37_Male",
+          "nhes_impute_build38_Male",
+          "ckd_unimpute_build37_All",
+          "ckd_unimpute_build38_All",
+          "ckd_unimpute_build37_Female",
+          "ckd_unimpute_build38_Female",
+          "ckd_unimpute_build37_Male",
+          "ckd_unimpute_build38_Male",
+          "ckd_impute_build37_All",
+          "ckd_impute_build38_All",
+          "ckd_impute_build37_Female",
+          "ckd_impute_build38_Female",
+          "ckd_impute_build37_Male",
+          "ckd_impute_build38_Male"
+        ],
+        "default": "nhes_unimpute_build38_All"
+      },
+      "default": "nhes_unimpute_build38_All",
+      "doc": "Database to.",
+      "__type": "path",
+      "__required": true,
+      "__private": false,
+      "__need_resolve": {
+        "databasectrlBed": "__BED_PATH_BY_DATABASE",
+        "databasectrlBim": "__BIM_PATH_BY_DATABASE",
+        "databasectrlFam": "__FAM_PATH_BY_DATABASE"
+      },
+      "__BED_PATH_BY_DATABASE": {
+        "nhes_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/NHES/build38/All/hweupnhesibd05nosex_qc.bed",
+        "ckd_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/CKD/build38/All/hweupckdramaibd05_qc.bed",
+        "ckd_unimpute_build38_Female": "env://gwashu/refdatabase/unimputed/CKD/build38/Female/femaleCKD.bed",
+        "ckd_unimpute_build38_Male": "env://gwashu/refdatabase/unimputed/CKD/build38/Male/maleCKD.bed"
+      },
+      "__BIM_PATH_BY_DATABASE": {
+        "nhes_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/NHES/build38/All/hweupnhesibd05nosex_qc.bim",
+        "ckd_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/CKD/build38/All/hweupckdramaibd05_qc.bim",
+        "ckd_unimpute_build38_Female": "env://gwashu/refdatabase/unimputed/CKD/build38/Female/femaleCKD.bim",
+        "ckd_unimpute_build38_Male": "env://gwashu/refdatabase/unimputed/CKD/build38/Male/maleCKD.bim"
+      },
+      "__FAM_PATH_BY_DATABASE": {
+        "nhes_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/NHES/build38/All/hweupnhesibd05nosex_qc.fam",
+        "ckd_unimpute_build38_All": "env://gwashu/refdatabase/unimputed/CKD/build38/All/hweupckdramaibd05_qc.fam",
+        "ckd_unimpute_build38_Female": "env://gwashu/refdatabase/unimputed/CKD/build38/Female/femaleCKD.fam",
+        "ckd_unimpute_build38_Male": "env://gwashu/refdatabase/unimputed/CKD/build38/Male/maleCKD.fam"
+      },
+    },
+    {
+      "name": "sharedcaseoption",
+      "type": "boolean",
+      "default": false
+    },
+
+
+    
