@@ -17,9 +17,9 @@
 <pre>
     <div class="container">
         <div class="block two first">
-            <h2>>module load Nextflow/20.10.0<br>>nextflow run -profile gb main.nf --pod5folderlist resources/listdir.txt --mode pod5 --method nano16SJunya --indexnanofile resources/minibar_index_list_16S.txt --qscore 15 --dbtaxonomy ncbi_16S_18S.<br><br></h2>
+            <h2></h2>
             <div class="wrap">
-            //Your content
+            >module load Nextflow/20.10.0<br>>nextflow run -profile gb main.nf --pod5folderlist resources/listdir.txt --mode pod5 --method nano16SJunya --indexnanofile resources/minibar_index_list_16S.txt --qscore 15 --dbtaxonomy ncbi_16S_18S.<br><br>
             </div>
         </div>
     </div>
