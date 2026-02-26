@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">We developed a novel bioinformatics pipeline designed to support the wet-lab protocol using a dual-indexing primer strategy (12 forward × 12 reverse primers). This approach enables simultaneous analysis of up to 144 samples per sequencing run.</p>
+<p align="left">We developed a novel bioinformatics pipeline designed to support the wet-lab protocol using a dual-indexing primer strategy (12 forward × 12 reverse primers). This approach enables simultaneous analysis of up to 144 samples per sequencing run.<br>The system is built on a flexible Nextflow framework and can be executed through a single command-line instruction, ensuring efficient, reproducible, and streamlined data processing.</p>
 
 ###
 
