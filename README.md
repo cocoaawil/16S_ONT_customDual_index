@@ -1,3 +1,7 @@
+# Workflow for Full-Length 16S rRNA Gene Analysis to Identify Bloodstream Pathogens Using Nanopore Sequencing (Up to 144 Samples per Run)
+### We developed a novel bioinformatics pipeline designed to support the wet-lab protocol using a dual-indexing primer strategy (12 forward × 12 reverse primers). This approach enables simultaneous analysis of up to 144 samples per sequencing run.
+### The system is built on a flexible Nextflow framework and can be executed through a single command-line instruction, ensuring efficient, reproducible, and streamlined data processing.
+
 ## How to run 16Snanopore for custom Dual-index based on Dr.Junya
 ### Example Usage :
 #### module load Nextflow/20.10.0
