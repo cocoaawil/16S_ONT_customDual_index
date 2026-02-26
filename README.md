@@ -6,7 +6,7 @@
 
 ###
 
-<h3 align="left">How to run 16Snanopore for custom Dual-index based on Dr.Junya</h3>
+<h3 align="left">How to run 16Snanopore for Custom Dual-index based on Dr.Junya</h3>
 
 ###
 
