@@ -2,8 +2,8 @@
 #### We developed a novel bioinformatics pipeline designed to support the wet-lab protocol using a dual-indexing primer strategy (12 forward × 12 reverse primers). This approach enables simultaneous analysis of up to 144 samples per sequencing run.
 #### The system is built on a flexible Nextflow framework and can be executed through a single command-line instruction, ensuring efficient, reproducible, and streamlined data processing.
 
-## How to run 16Snanopore for custom Dual-index based on Dr.Junya
-### Example Usage :
+### How to run 16Snanopore for custom Dual-index based on Dr.Junya
+#### Example Usage :
 #### module load Nextflow/20.10.0
 #### >nextflow run -profile gb main.nf --pod5folderlist resources/listdir.txt --mode pod5 --method nano16SJunya --indexnanofile resources/minibar_index_list_16S.txt --qscore 15 --dbtaxonomy ncbi_16S_18S
 #### where : taxonomy database (--dbtaxonomy) contains k2_standard_16gb (default), 16S_RDP, 16S_SILVA138, 16S_Greengenes2, ncbi_16S_18S
